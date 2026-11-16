@@ -3,11 +3,15 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { notFound } from "next/navigation";
 
 const pages = {
-  empresa: { eyebrow: "A EMPRESA", title: "Engenharia que parte da escuta.", text: "A N.Hauser trabalha com engenharia e estruturas metálicas a partir de uma leitura cuidadosa de cada necessidade. Informações institucionais, histórico e equipe serão incluídos após validação da empresa." },
-  servicos: { eyebrow: "SERVIÇOS", title: "Soluções com direção técnica.", text: "Engenharia, estruturas metálicas, projetos estruturais e soluções personalizadas. Os escopos específicos de atendimento serão detalhados após a confirmação da N.Hauser." },
+  empresa: { eyebrow: "A EMPRESA", title: "Engenharia e estruturas metálicas.", text: "A N.Hauser é especializada em engenharia e estruturas metálicas e mistas. Atua com projetos mecânicos e civis, fabricação e montagem de estruturas personalizadas, conforme a necessidade de cada projeto." },
+  servicos: { eyebrow: "SERVIÇOS", title: "Soluções para estruturas metálicas.", text: "Galpões em estrutura metálica, coberturas, mezaninos, escadas, guarda-corpos e corrimãos. A empresa também atua com manutenção preventiva e corretiva, automação, consultoria, projetos mecânicos e civis e emissão de laudos." },
   projetos: { eyebrow: "PROJETOS", title: "Uma página em construção.", text: "Os projetos realizados pela N.Hauser serão apresentados aqui quando houver imagens, dados técnicos e autorizações de publicação confirmados." },
-  contato: { eyebrow: "CONTATO", title: "Vamos começar pelo seu projeto.", text: "O WhatsApp, telefone, e-mail, localização e área de atendimento serão configurados nesta página assim que os canais oficiais forem disponibilizados." },
+  contato: { eyebrow: "CONTATO", title: "Fale sobre o seu projeto.", text: "Rua Oswaldo Schroeder, 2687, Lontras — SC, 89182-000. Telefone e WhatsApp: (47) 99228-3533. Atendimento de segunda a sexta, das 08:00 às 19:00; sábado, das 08:00 às 12:00." },
 } as const;
+
+export function generateStaticParams() {
+  return Object.keys(pages).map((section) => ({ section }));
+}
 
 export default async function SectionPage({ params }: { params: Promise<{ section: string }> }) {
   const { section } = await params;

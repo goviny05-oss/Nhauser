@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./institutional.css";
 
 export const metadata: Metadata = {
   title: "N.Hauser — Engenharia e Estruturas",

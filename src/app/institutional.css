@@ -1,0 +1,44 @@
+/* Escala compacta para navegação institucional */
+.wrap{width:min(1160px,calc(100% - 48px))}
+.site-header{height:76px}
+.brand-logo{width:54px;height:54px}
+.section{padding-block:clamp(64px,8vw,104px)}
+.intro h2,.services h2,.projects h2,.principles h2{font-size:clamp(38px,4.8vw,66px)}
+.intro-copy>p{margin-block:24px;font-size:16px}
+.services{padding:clamp(68px,8vw,96px) 0 30px}
+.services-list{margin-top:42px}
+.service{padding:19px 0}
+.service h3{font-size:clamp(21px,2.2vw,29px)}
+.service p{font-size:14px}
+
+/* Processo de trabalho */
+.process{background:#eceeef;border-block:1px solid #d4d7d8}
+.process-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
+.process h2{margin:0;font-size:clamp(38px,4.5vw,62px);line-height:.96;letter-spacing:-.06em;text-transform:uppercase}
+.process h2 em{font-family:Georgia,serif;font-weight:400;text-transform:none}
+.process-layout>div>p:last-child{max-width:430px;margin:24px 0 0;font-size:16px;line-height:1.55;color:#4e5355}
+.process-steps{list-style:none;margin:0;padding:0;border-top:1px solid #b9bdbe}
+.process-steps li{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid #b9bdbe}
+.process-steps span{color:var(--red);font-size:11px;font-weight:800;letter-spacing:.08em}
+.process-steps h3{margin:0;font-size:18px;letter-spacing:-.02em}
+.process-steps p{max-width:440px;margin:6px 0 0;color:#585d5f;font-size:14px;line-height:1.5}
+
+.section-title{margin-bottom:32px}
+.project-grid{grid-template-rows:270px 270px}
+.contact-summary{display:flex;gap:42px;margin:26px 0}
+.contact-summary p{margin:0;line-height:1.6}
+.final-cta{padding:clamp(72px,8vw,108px) 0}
+.final-cta h2{font-size:clamp(46px,5.6vw,76px)}
+.footer{min-height:150px}
+.footer small{line-height:1.6}
+
+@media(max-width:760px){
+  .site-header{height:70px}
+  .brand-logo{width:50px;height:50px}
+  .section{padding-block:62px}
+  .process-layout{grid-template-columns:1fr;gap:34px}
+  .process h2{font-size:clamp(38px,11vw,54px)}
+  .contact-summary{display:grid;gap:12px}
+  .project-grid{grid-template-rows:250px 220px 220px}
+  .final-cta h2{font-size:clamp(44px,12vw,60px)}
+}
