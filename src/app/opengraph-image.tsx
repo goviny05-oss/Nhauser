@@ -1,11 +1,12 @@
 import { ImageResponse } from "next/og";
+import { getBrandLogoDataUrl } from "@/lib/brand-image";
 
 export const alt = "N.Hauser — Engenharia e Estruturas";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OpenGraphImage() {
-  const logo = new URL("../../public/brand/n-hauser-logo.jpeg", import.meta.url).toString();
+export default async function OpenGraphImage() {
+  const logo = await getBrandLogoDataUrl();
 
   return new ImageResponse(
     <div style={{ background: "#111315", color: "#fafaf8", display: "flex", height: "100%", overflow: "hidden", padding: "72px", position: "relative", width: "100%" }}>

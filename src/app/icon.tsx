@@ -1,10 +1,11 @@
 import { ImageResponse } from "next/og";
+import { getBrandLogoDataUrl } from "@/lib/brand-image";
 
 export const size = { width: 64, height: 64 };
 export const contentType = "image/png";
 
-export default function Icon() {
-  const logo = new URL("../../public/brand/n-hauser-logo.jpeg", import.meta.url).toString();
+export default async function Icon() {
+  const logo = await getBrandLogoDataUrl();
 
   return new ImageResponse(
     <div style={{ alignItems: "center", background: "#fafaf8", display: "flex", height: "100%", justifyContent: "center", width: "100%" }}>
